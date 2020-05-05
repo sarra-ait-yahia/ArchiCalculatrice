@@ -14,11 +14,11 @@ public class Main {
 	
 	@SuppressWarnings("deprecation")
 	public static void main (String[]args) throws IOException, ClassNotFoundException, InterruptedException {
-		String lang="FR";
+		String lang="EN";
         if( lang.equals("FR"))
-        	ApplicationProperties.getInstance("src/clientPackage/messageFr.properties");
+        	ApplicationProperties.getInstance("src/clientPackage/messageFr");
         else 
-        	ApplicationProperties.getInstance("src/clientPackage/messageEn.properties");
+        	ApplicationProperties.getInstance("src/clientPackage/messageEn");
         
 		Thread service = new Thread(new Runnable() {
 		    public void run(){

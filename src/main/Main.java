@@ -18,7 +18,7 @@ public class Main {
 		String lang="FR";
 		try{
 		if( lang.equals("FR"))
-	        ApplicationProperties.getInstance("src/clientPackage/messageFr");
+	        ApplicationProperties.getInstance("src/clientPackage/messageFrr");
 	    else 
 	        ApplicationProperties.getInstance("src/clientPackage/messageEn");
 		}catch (CalculatriceException e){

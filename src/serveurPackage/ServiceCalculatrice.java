@@ -19,7 +19,6 @@ public class ServiceCalculatrice {
 	
 	public static void lunch() throws IOException, ClassNotFoundException  {
 		server= new ServerSocket(PORT);
-		System.out.println(PORT);
 		LOGGER.log(Level.INFO, "Server running");
 		
 		while (true){

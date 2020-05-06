@@ -1,5 +1,10 @@
-DIVISION_BY_ZERO = Division par zero non autorisee
-UKNOWN_OPERATION = Operation inconnue
-INPUT_MISMATCH =  l'operande n'est pas un chiffre
-INPUT_MISMATCH_REPONSE = Repondez par y ou n
-SERVER_ERROR = Une erreur s'est produite cote serveur
+DIVISION_BY_ZERO = Division par zéro non autorisée
+UKNOWN_OPERATION = Opération inconnue
+INPUT_MISMATCH =  l'opérande n'est pas un chiffre
+INPUT_MISMATCH_REPONSE = Répondez par y ou n
+SERVER_ERROR = Une erreur s'est produite coté serveur
+NUMBER_ONE = Veuillez saisir un nombre
+NUMBER_TWO = Veuillez saisir un autre nombre
+OPERATION = Opération
+ANSWER = Voulez vous faire d'autres calculs? y/n
+SERVER_ERROR_LUNCH = Le serveur ne démarre pas

@@ -24,9 +24,9 @@ public class RequeteCalculatrice {
 		Socket socket= new Socket(host.getHostName(), PORT);
 		
 		oos=new ObjectOutputStream (socket.getOutputStream());
-		//LOGGER.log(Level.INFO, "Connection to server established");
+		LOGGER.log(Level.INFO, "Connection to server established");
 		
-		//LOGGER.log(Level.INFO, "Sending request to Socket server");
+		LOGGER.log(Level.INFO, "Sending request to Socket server");
 		oos.writeObject(operation);
 		
 		ois= new ObjectInputStream(socket.getInputStream());

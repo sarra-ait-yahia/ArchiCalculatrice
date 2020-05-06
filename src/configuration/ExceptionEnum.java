@@ -5,7 +5,9 @@ public enum ExceptionEnum {
     UKNOWN_OPERATION(2, "operation not implemented yet"),
     INPUT_MISMATCH(3, "input mismatch"),
     INPUT_MISMATCH_REPONSE(4,"answer y or n"),
-    SERVER_ERROR(5, "an erreur has occured on server side");
+    SERVER_ERROR(5, "an erreur has occured on server side"),
+    SERVER_ERROR_LUNCH (6, "lunch of the server is not working"),
+    FILE_ERROR (7, "Problem with opening or loading the translation file - No translation");
     
     
     private final int code;
@@ -29,4 +31,12 @@ public enum ExceptionEnum {
     }
     return null;
     }
+    
+    public static String getDefaultMessageFromCode(int code) {
+        for(ExceptionEnum e : ExceptionEnum.values()){
+            if(code == e.code) return e.getDefaultMessage();
+        }
+        return null;
+        }
+  
 }

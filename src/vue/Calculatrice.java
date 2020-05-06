@@ -18,11 +18,11 @@ public class Calculatrice {
 			try {
 				double a, b;
 				String ope;
-				System.out.print("Veuillez saisir un nombre : ");
+				System.out.print(ApplicationProperties.readProperty("NUMBER_ONE","num 1 : "));
 				a = sc.nextDouble();
-				System.out.print("operation : ");
+				System.out.print(ApplicationProperties.readProperty("OPERATION","operation"));
 				ope = sc.next();
-				System.out.print("Veuillez saisir un autre nombre : ");
+				System.out.print(ApplicationProperties.readProperty("NUMBER_TWO","num 2 : "));
 				b = sc.nextDouble();
 				OperationModel operation = new OperationModel(a, b, ope);
 				try {
@@ -32,8 +32,7 @@ public class Calculatrice {
 							&& resultat.getStatus().equals("failed"))
 						System.out.println(ApplicationProperties.readProperty(
 								ExceptionEnum.getNameFromCode(resultat
-										.getErrorCode()), ExceptionEnum
-										.getNameFromCode(resultat
+										.getErrorCode()), ExceptionEnum.getDefaultMessageFromCode(resultat
 												.getErrorCode())));
 					else
 						System.out.println(resultat.getResult());
@@ -47,7 +46,7 @@ public class Calculatrice {
 						"INPUT_MISMATCH",
 						ExceptionEnum.INPUT_MISMATCH.getDefaultMessage()));
 			} finally {
-				System.out.println("Voulez vous faire d'autres calculs? y/n ");
+				System.out.println(ApplicationProperties.readProperty("ANSWER","continue? y/n "));
 				while (true) {
 					reponse = sc.next();
 					if (!reponse.equals("y") && !reponse.equals("n")){
